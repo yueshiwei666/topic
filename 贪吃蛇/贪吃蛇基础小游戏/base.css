@@ -1,0 +1,17 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+table{
+    border-collapse: collapse;
+    /* 只设置这个的话，会让网页中的元素的宽度和高度出现小数点的
+    形式，出现不准确的样式，因为这个属性是就是把表格中的方框和合成一个
+    单一的边框，需要在td中设置那个 */
+}
+td{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    box-sizing:border-box;/* 盒子的大小是除了边框之外的长度 */
+    /* border-box  width 和 height 属性包括内容，内边距和边框，但不包括外边距。 */
+}
