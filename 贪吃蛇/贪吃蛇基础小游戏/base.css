@@ -12,6 +12,7 @@ td{
     width: 30px;
     height: 30px;
     border: 1px solid black;
-    box-sizing:border-box;/* 盒子的大小是除了边框之外的长度 */
+    box-sizing:border-box;
+    /* 盒子的大小是除了外边距之外的长度 */
     /* border-box  width 和 height 属性包括内容，内边距和边框，但不包括外边距。 */
 }

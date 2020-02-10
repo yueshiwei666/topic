@@ -12,7 +12,7 @@ window.onload = function () {
     var step = 30
     var direction = 'right';
     var timer = null;/* 保存定时器 */
-
+    var snake = []
     for (let i = 0; i < 10; i++) {
         let tr = document.createElement('tr')
         for (let j = 0; j < 10; j++) {
@@ -25,7 +25,7 @@ window.onload = function () {
     var table = document.querySelector('table')
     table.style.position = 'relative'
     var div = document.createElement('div');
-    div.style.cssText = `width:30px; height:30px;background:red;`
+    div.style.cssText = `left:0px;width:30px; height:30px;background:red;position:absolute;`
     table.appendChild(div)
     div.style.position = 'absolute'
     div.style.top='0px';
@@ -51,6 +51,8 @@ window.onload = function () {
          food_for = false;
         }
     }while(food_for) 
+    console.log(div.offsetLeft+'--'+div.offsetTop);
+    console.log(food.offsetLeft+'--'+food.offsetTop);
     
 
     function start(){
@@ -73,27 +75,32 @@ window.onload = function () {
             div.style['top'] = div.offsetTop + step + 'px';
         }
 
-        if(div.offsetLeft - 1 == food.offsetLeft
+        if(div.offsetLeft == food.offsetLeft
                          && 
            div.offsetTop ==  food.offsetTop){
                 food.style.display = 'none'
                 food_for = true
         }
         
+        /* 吃掉食物后再创建一个食物 */
         while(food_for){
             food_top = 30 * Math.floor(Math.random()*10) + 'px' ;
             food_left = 30 * Math.floor(Math.random()*10) + 'px' ;
-                food.style.top = food_top
-                food.style.left = food_left
-                if(food.offsetLeft == div.offsetLeft
-                                 &&
-                   food.offsetTop == food.offsetTop){
-                food_for = false;
-                food.style.display = 'block'
-                }
+            food.style.top = food_top
+            food.style.left = food_left
+            if(food.offsetLeft !== div.offsetLeft
+                                ||
+                food.offsetTop !== food.offsetTop){
+            food_for = false;
+            food.style.display = 'block'
+            }
         }
-    
-        
+        /* 判断游戏结束的条件 */
+        if(div.offsetLeft >270 || div.offsetTop >270 
+            || div.offsetLeft < 0 || div.offsetTop <0){
+            alert('game over')
+            clearInterval(timer)
+        }
     }
         
     
