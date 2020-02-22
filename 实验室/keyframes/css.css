@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.div{
+    width: 100%;
+    height: 728px;
+    background: red; 
+}
+.div1{
+    width: 100%;
+    height: 728px;
+    background: pink; 
+    position: relative;
+    animation: myfirst1 1s infinite normal none; 
+}
+        @keyframes myfirst1  /* myfirst是动画的名字, animation是动画的连接  
+          后面的myfirst是找到这个myfirst名字的动画 3s执行的时间  */
+        {
+        0%   {position: absolute; top: 728px; }
+        
+        100% {position: absolute; top: 0px;}
+        }
+
+
+
+
+
+
+
+
+
+
+
+
