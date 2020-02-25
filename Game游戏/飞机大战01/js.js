@@ -12,7 +12,6 @@ img.className = 'img'
 img.style.cssText = `widht:50px;height:50px;position:relative;
 top:645px;left:50%;`
 border.appendChild(img)
-console.log(img.offsetLeft);
 
 /* 当有按键被按下的时候 */
 document.onkeydown = function(e){
