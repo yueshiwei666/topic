@@ -110,8 +110,16 @@ function CreateBullet(){
             bullet.style.display = 'none'
         }
         /* 第二种情况是碰到飞机的时候定时器清除 */
-
-    }, 40);
+        for (let index = 0; index < foearr.length; index++) {
+            if(bullet.offsetLeft <= foearr[index].offsetLeft &&
+               bullet.offsetLeft + 50 >= foearr[index].offsetLeft){
+                  if (bullet.offsetTop < foearr[index].offsetTop) {
+                        foearr[index].style.display = 'none'
+                  }       
+            }
+               
+        }
+    }, 20);
 }
 
 /* 当我按空格键的时候就开始游戏 */
@@ -128,31 +136,55 @@ var start_stop = false
     }
 } */
 var foearr = []
+var index = 0;/* 记录位置的一个值 */
  function foe(){
      /* 外层定时器随机的创建元素的 */
     let timer = setInterval(() => {
         var foeplane = document.createElement('img');
         foeplane.className = 'foeplane'
         foeplane.setAttribute('src','plane.jpg')
-        foeplane.style.left = Math.floor(Math.random()*500) + 'px'
+        foeplane.style.left = Math.floor(Math.random()*450) + 'px'
         border.appendChild(foeplane)
+        index += 1;
+        foearr.index = index
+        foearr.push(foeplane)
         /* 内层的定时器是不断的改变元素的top值的 */
         let timer = setInterval(() => {
+            /* 不停的改变top的值 */
             foeplane.style.top = foeplane.offsetTop+10+'px'
             /* 位置移动好保存一下数值 */
             foeplane.left = foeplane.offsetLeft
             foeplane.top = foeplane.offsetTop
-            foearr.push(foeplane)
-            if(foeplane.offsetTop > 650){
-                foeplane.style.display = 'none'
-                
+            /* 删除数组中的元素 */
+            for(let i=0;i<foearr.length;i++){
+                if(foeplane.index == foearr[i].index){
+                    foearr.splice(i,1,foeplane) 
+                }
             }
-        }, 50);
+            /* 到达最下面的时候就清楚定时器， */
+            if(foeplane.offsetTop > 650){
+                /* 删除父节点中的某个子节点 */
+                clearInterval(timer)
+                for(let i=0;i<foearr.length;i++){
+                    if(foearr[i].offsetTop > 650){
+                        foearr.splice(i,1) 
+                        border.removeChild(foeplane)
+                    }
+                }
+            }
+        }, 200);
     }, 600);
 } 
-
-
-
+{
+   let  arr = ['1','2']
+   delete arr[0]
+}
+{
+    setTimeout(() => {
+        console.log(foearr);
+        
+    }, 5000);
+}
 
 /* 创建一个游戏的类 */
 class Game{
