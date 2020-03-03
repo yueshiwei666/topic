@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../jquery.js"></script>
+</head>
+<body>
+    <!-- cookie是保存数据的，可以帮助实现在某个网站的第几百页的时候就算用户刷新了浏览器也可以展示关闭之前的那个页面
+      说明书：
+        存在的时间：1：在没有关闭此页面之前  2：可以在cookie中设置cookie过期的一个时间 
+        使用的方式：每次cookie只能创建一个key（属性）=value（属性值），创建多个是无效的如（document.cookie = 'name=qqq;age=12'）
+        cookie数据的数据是共享的：在一个文件内cookie数据是可以让别的网页访问的到的cookie值
+
+        在后台的存储cookie中可以查看的-->
+
+        <input class="inputs" type="text" value="1">
+        <input class='input' type="button" value="保存">
+        <script>
+           
+
+            $('.input').click = function(){
+                var value = $('.inputs').val()
+                document.cookie('value='+value)
+            }
+            
+
+        </script>
+</body>
+</html>

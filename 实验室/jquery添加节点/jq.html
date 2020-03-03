@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">zzzzzzzzzzzzzzzzz</div>
+    
+    <script src="../../jquery.js"></script>
+    <script>
+        /* 加$() */
+       function createdEl(){
+                var $div = $("<div>"+
+                                "<div>123123</div>"+
+                                "<h1>123123</h1><br />\" "+
+                        "</div>");
+                $('#div').prepend($div);
+        return $div
+       }
+       $('#div').prepend(createdEl())
+
+        /* 不加$() */
+        function createdElq(){
+                var $div = "<div>"+
+                                "<div>qqq</div>"+
+                                "<span>www</span>"+
+                        "</div>"
+               
+        return $div
+       }
+       $('#div').prepend($("11111111111111111"))
+        
+
+        
+    </script>
+</body>
+</html>

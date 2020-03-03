@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+            <script src="vue.js"></script>
+            <style>
+            .p{
+                color:Red;
+            }
+            </style>
+        </head>
+        <body>       
+            <div   id="app">  那个k一般都是index  我这瞎写的
+                <li v-for="(p,k) in persons" >{{k}}={{p.name}},{{p.age}}---
+                --<button @click="delect(k)">删除</button>---
+                <button v-on:click="delect1(k,{name:'join',age:16})">更新</button>
+                </li>
+                <p v-for="(obj,index) in personss">{{obj}},{{index}}</p>
+            </div>
+            <script>
+                var aa={qwe:"qwe",aaa:"asd"}
+                for(i in aa){
+                    console.log("我是一个对象的i"+i);
+                    
+                }
+        
+                var bb=["1",'2','3','4']
+                for(i in bb){
+                    console.log("我是一个数组的i"+i);
+                    
+                }
+            var vm = new Vue({
+            el:'#app',
+            data:{ 
+               persons:[
+                     {name:'Bom',age:11},
+                     {name:'Rouse',age:32},
+                     {name:'Tom',age:12}
+                 ],
+               personss:["111","222","333"]
+            },
+            methods:{
+                delect(index){
+                     this.persons.splice(index,1)
+                },
+                delect1(index,newp){
+                      this.persons.splice(index,1,newp)
+                }
+            }
+           })
+            </script>
+</body>
+</html>
