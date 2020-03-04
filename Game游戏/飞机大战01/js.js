@@ -78,6 +78,7 @@ function launch(){
    
 var obj = []
     setInterval(() => {
+        img.style.background = "red"
         let planes = document.createElement('img')
         planes.src = 'plane.jpg'
         planes.className = 'planes'
