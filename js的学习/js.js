@@ -1,0 +1,6 @@
+/* 
+for in 
+forEach
+forOf
+
+*/
