@@ -1,5 +1,5 @@
 //        https://www.jianshu.com/p/84c158c068e5
-class Math {       //es6
+class Maath {       //es6
     // 构造函数
     //  Math === Math.prototype.constructor; // true
 
@@ -12,7 +12,10 @@ class Math {       //es6
     constructor(x,y) {   
         this.x = x;
         this.y = y;
-        function qqq(){}
+        /* this.qqq = function(){
+            return '1111111111'
+        } */
+
     }
 
     //相当于Math.prototype.add = function(){}
@@ -20,8 +23,8 @@ class Math {       //es6
         return this.x + this.y;
     }
 }
-let math = new Math(1,2);
-console.log(math.add()); //3
+let math = new Maath(1,2);
+console.log(math); //3
 
 
 
