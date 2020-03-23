@@ -85,6 +85,7 @@ new Promise((resolve,rejece)=>{
 
 
 /* 还要一个就是多个程序都执行的话  需求：当程序都执行完的时候在往下面来执行程序的 */
+   //就是现在有三个程序，需要让着三个程序都执行完了之后，我在来执行下面的程序
 Promise.all([
     new Promise((resolve,reject)=>{
         setTimeout(() => {/* 用定时器来模拟网络的请求 */
@@ -96,14 +97,11 @@ Promise.all([
             resolve({'name':'2222'})
         }, 500);
     })
-]).then(data=>{
+]).then(data=>{   //这个data是一个数组，保存着上面promise全部的结果
     console.log('这个时候两个网络的请求都执行完毕了');
-    
     console.log(data);
     console.log(data[0]);
     console.log(data[1]);
-    
-    
 })
 
 
