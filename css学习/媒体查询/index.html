@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            margin: auto;
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .div1 {
+            flex-grow: 10;
+            background-color: blue;
+            height: 200px;
+        }
+
+        .div2 {
+            flex-grow: 4;
+            background-color: red;
+            height: 200px;
+        }
+
+        .div3 {
+            flex-grow: 2;
+            background-color: aqua;
+            height: 200px;
+        }
+
+        @media screen and (min-width:1200px) {
+            /*我的电脑 大型设备（大台式电脑，1200px 起）
+	.content{width:1200px;}
+*/
+        }
+
+        @media screen and (max-width:1200px) {
+
+            .div {
+                width: 960px;
+            }
+
+            .div1 {
+                width: 100%;
+            }
+
+            .div2 {
+                flex: 5;
+            }
+
+            .div3 {
+                flex: 1;
+                background-color: rgb(12, 12, 12);
+            }
+        }
+
+        @media screen and (max-width:992px) {
+
+            /* 小型设备（平板电脑，768px 起） */
+            .div {
+                width: 720px;
+            }
+
+        }
+
+        @media screen and (max-width:768px) {
+
+            /* 超小设备（手机，小于 768px） */
+            .div {
+                width: 540px;
+            }
+        }
+
+        @media screen and (max-width:576px) {
+
+            /* 超小设备（手机，小于 768px） */
+            .div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <div class="div1">123</div>
+        <div class="div2">123</div>
+        <div class="div3">123</div>
+    </div>
+</body>
+
+</html>

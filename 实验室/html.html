@@ -4,38 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <title>Document</title>
     <style>
-        body>div:nth-child(2) {
-            background: red;
+        .div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+
+        li {
+            background-color: red;
+        }
+
+        p {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
         }
     </style>
 </head>
 
 <body>
-    <form action="">
-        <label for="label">111</label><input type="text" id="label">
-        <label for="label1">222</label><input type="text" id="label1">
-    </form>
-    <img style="width: 100px;" src="./01.png" alt="">
-    <img style="width: 100px;" src="./01.png" alt="">
-    <img style="width: 100px;" src="./01.png" alt="">
+    <script src="./js.js"></script>
+    <ul>
+        <!-- <li>去去去</li>
+        <li>去去去</li>
+        <li>去去去</li>
+        <li>去去去</li>
+        <li>去去去</li> -->
+        <button class="divv">haha</button>
+        <div class="div"></div>
+        <p class="p"></p>
+    </ul>
+    <!-- <script src="../jquery.js"></script> -->
 
-    <script src="../jquery.js"></script>
     <script>
 
-        $.ajax({
-            url: '127.0.0.1:3000',
-            type: 'GET',
-            dataType: 'JSONP',
+        /* $(function () {
+            $('.divv').click(function () {
+                alert('1')
+                $('p').slideToggle("slow");
+            })
+        }) */
+        /* $.ajax({
+            url: 'http://47.97.208.201:3000/swiper',
+            type: 'get',
             success: function (a) {
+                alert('1')
                 console.log(a);
             }
-        })
+        }) */
+
 
 
     </script>
+
 </body>
 
 </html>

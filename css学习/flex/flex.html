@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        body{
-            margin:100px auto;
+        body {
+            margin: 100px auto;
         }
-        .div{
-            width:600px;
-            height:600px;
-            background:pink;
-/* main axis是主轴   cross-axis是交叉轴 */
-            display:flex;/* 开启弹性布局 */
+
+        .div {
+            width: 600px;
+            height: 600px;
+            background: pink;
+            /* main axis是主轴   cross-axis是交叉轴 */
+            display: flex;
+            /* 开启弹性布局 */
             /* flex-direction: row; */
             /* 改变主轴的方向从左边到右边，无变化的 */
-            
+
             /* flex-direction是决定main axis的方向的默认是从左边到右边 */
             /* flex-direction: row-reverse; */
             /* 改变主轴的方向从右边到左边*/
@@ -32,63 +35,76 @@
             /* justify-content: flex-end; */
             /*justify-content: flex-start;*/
             /* justify-content: center; */
-            
+
             /* justify-content: space-around; */
             /* 左右两边的距离是中间的一半 */
             /* justify-content: space-between; */
-            /*对齐边缘的地方，中间均等分 */
+            /*对齐左右边缘的地方，中间均等分 */
             /* justify-content: space-evenly; */
-             /* 每个空隙都是一样的间距 */
+            /* 每个空隙都是一样的间距 */
 
 
-             /* 这三个都是在交叉轴的位置对齐的方式，单行的 */
-             /* align-items: flex-start; */
-             /* align-items: flex-end; */
-             align-items: center;
+            /* 这三个都是在交叉轴(竖着的)的位置对齐的方式，单行的 */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            align-items: center;
 
-             /* 这个是让内容对齐的，设置一下字体的大小试试 */
-             /* align-items:baseline; */
-             
-            /* flex-wrap: wrap; *//* 换行显示，当宽度不够的时候换行的，设置多个div看到效果*/
-            /* flex-wrap: nowrap; *//* 不换行显示，就是都是一行中剂着会压缩元素 */
-            /* flex-wrap: wrap-reverse; *//*对交叉轴做一个翻转，反转一下行的位置*/
-            
-            /* align-content: flex-start; *//* 对多行的flex item在交叉轴上额对齐方式，有多个元素 */
+            /* 这个是让内容对齐的，设置一下字体的大小试试 */
+            /* align-items:baseline; */
+
+            /* flex-wrap: wrap; */
+            /* 换行显示，当宽度不够的时候换行的，设置多个div看到效果*/
+            /* flex-wrap: nowrap; */
+            /* 不换行显示，就是都是一行中剂着会压缩元素 */
+            /* flex-wrap: wrap-reverse; */
+            /*对交叉轴做一个翻转，反转一下行的位置*/
+
+            /* align-content: flex-start; */
+            /* 对多行的flex item在交叉轴上额对齐方式，有多个元素 */
             /* align-content: flex-end; */
-            /* align-content: center;  *//* 交叉轴位置对齐 */
-            /* align-content: space-around; *//* 上下位置空隙是中间位置的一半 */
-            /* align-content: space-between; *//* 最上面在嘴上  最下面在最下面 */
-            /* align-content: space-evenly; *//*交叉轴的对齐方式，中间的空隙均等分 */
-            
-           
+            /* align-content: center;  */
+            /* 交叉轴位置对齐 */
+            /* align-content: space-around; */
+            /* 上下位置空隙是中间位置的一半 */
+            /* align-content: space-between; */
+            /* 最上面在嘴上  最下面在最下面 */
+            /* align-content: space-evenly; */
+            /*交叉轴的对齐方式，中间的空隙均等分 */
+
+
         }
-        .div1{
+
+        .div1 {
             /* 也可以是一个小数的，对剩下的内容进行一个乘以你写的小数，加上元素本身的
             大小就是元素的本身的大小 */
-           /*  flex-grow: 1; *//* 规定item元素的所占的位置的大小 */
+            /*  flex-grow: 1; */
+            /* 规定item元素的所占的位置的大小 */
 
             /* 对item的元素进行一个收缩的处理，是对剩余的空间进行一个计算的 */
             /* flex-shrink: 1; */
 
             /* 设置item的宽度的，他的优先级高于，父元素设置的样式和 他本身的width */
             /* flex-basis: 100px; */
-            
-            width:100px;
-            height:100px;
-            background:green;
+
+            width: 100px;
+            height: 100px;
+            background: green;
         }
-        .div2{
-            width:100px;
-            height:100px;
-            background:red;
+
+        .div2 {
+            width: 100px;
+            height: 100px;
+            background: red;
         }
-        .div3{
-            width:100px;
-            height:100px;
-            background:yellow;
+
+        .div3 {
+            width: 100px;
+            height: 100px;
+            background: yellow;
         }
     </style>
 </head>
+
 <body>
     <div class='div'>
         <div class='divv div1'>111</div>
@@ -102,4 +118,5 @@
         <div class='divv div3'>333</div> -->
     </div>
 </body>
+
 </html>

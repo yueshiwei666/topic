@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <script src="../../jquery.js"></script>
 </head>
+
 <body>
     <!-- cookie是保存数据的，可以帮助实现在某个网站的第几百页的时候就算用户刷新了浏览器也可以展示关闭之前的那个页面
       说明书：
@@ -16,17 +18,32 @@
 
         在后台的存储cookie中可以查看的-->
 
-        <input class="inputs" type="text" value="1">
-        <input class='input' type="button" value="保存">
-        <script>
-           
+    <input type="button" class="btn" name="" id="" value="点击事件">
+    <input type="button" class="btns" name="" id="" value="读取cookie值">
+    <input type="text" name="" id="">
+    <script>
+        $('.btn').click(function () {
+            //这个是保存cookie的数据
+            document.cookie = "name=1"
+            document.cookie = "names=2"
+            document.cookie = "username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT";
+        })
+        $('.btns').click(function () {
+            console.log(document.cookie);
+            console.log('1');
+        })
+        var now = new Date()
+        console.log(now.setDate);
+        console.log(now.setFullYear);
+        console.log(now.setHours);
+        console.log(now.setMilliseconds);
+        console.log(now.setMinutes);
+        console.log(now.setMonth);
+        console.log(now.setSeconds);
+        console.log(now.setTime);
+        console.log(now.getTime());
 
-            $('.input').click = function(){
-                var value = $('.inputs').val()
-                document.cookie('value='+value)
-            }
-            
-
-        </script>
+    </script>
 </body>
+
 </html>
