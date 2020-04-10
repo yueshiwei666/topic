@@ -87,3 +87,18 @@ class类的row表示一行
 min中从小到大的，下面会覆盖上面的
 ```
 
+```javascript
+@media screen and (min-width:1200px){
+    /*大桌面显示器*/
+}
+@media screen and (max-width:1199px){
+    /*中等屏幕*/
+}
+@media screen and (max-width:991px){
+    /*平板ipad*/
+}
+@media screen and (max-width:767px){
+    /*超小屏幕*/
+}
+```
+
