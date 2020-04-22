@@ -19,9 +19,10 @@ var button2 = document.querySelectorAll(".delete");
 button2[0].onclick = function () {
   /* document.cookie = "input=; expires=Thu, 01 Jan 1970 00:00:00 GMT"; */
   var date = new Date();
-  date.setTime(date.getMilliseconds() + 5000);
+  date.setTime(date.getMinutes() + 0.1 * 60 * 1000);
   /* date.setTime(date.getSeconds() - 3000); */
-  document.cookie = `input=;expires=${date.toGMTString()}`;
+
+  document.cookie = `input=12;expires=${date.toGMTString() + 3000}`;
 };
 
 function inner() {
