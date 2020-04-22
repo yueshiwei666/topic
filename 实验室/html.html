@@ -7,55 +7,107 @@
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <title>Document</title>
     <style>
-        .div .div2 {
-            width: 100px;
-            height: 100px;
-            background-color: red;
+        .div {
+            /* border: 1px solid red; */
+            height: 40px;
+            display: flex;
+
+        }
+
+       
+
+        .div .divbox {
             position: relative;
+            left: 10px;
+          /*   border: 1px solid red; */
+            width: 50px;
+            height: 40px;
+            text-align: center;
+            font-size: 10px;
+            padding: 10px 0;
+
+        }
+
+        .div .divbox div {
+            margin: 0px auto;
+        }
+
+        .div .red {
+            position: relative;
+            margin-left: 10px;
+            top: 35%;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(86, 84, 84);
+            border-radius: 50%;
+        }
+        .div .qqq{
+            background-color: rgb(255, 0, 0);
+        }
+        .div .work{
+            margin-left: -5px;
+            padding-left: 10px;
+            border-left: 1px solid rgb(0, 0, 0);
+            line-height: 40px;
+        }
+        .div .name{
+            margin-left: 10px;
+            line-height: 40px;
         }
     </style>
 </head>
 
 <body>
-    <script src="./js.js"></script>
-    <div class="div">
-        div
-        <div class="div1">
-            div111
-            <div class="div2">
-                div222
+    <hr />
+    <div>
+        <div class="div div1">
+            <div class="divbox">
+                <div>3-20</div>
+                <div>2:20</div>
             </div>
-            <div class="div2">
-                div222222
+            <div class="red qqq"></div>
+            <div class="work">已发货 &nbsp; |</div>
+            <div class="name">温女士</div>
+
+        </div>
+        <div class='div div2'>
+            <div class="divbox">
+                <div>3-20</div>
+                <div>2:20</div>
             </div>
-            <div class="div2">
-                div222222222
+            <div class="red"></div>
+            <div class="work">已发货 &nbsp; |</div>
+            <div class="name">温女士</div>
+        </div>
+        <div class="div div3">
+            <div class="divbox">
+                <div>3-20</div>
+                <div>2:20</div>
             </div>
+            <div class="red"></div>
+            <div class="work">已发货 &nbsp; |</div>
+            <div class="name">温女士</div>
+        </div>
+        <div class="div div4">
+            <div class="divbox">
+                <div>3-20</div>
+                <div>2:20</div>
+            </div>
+            <div class="red"></div>
+            <div class="work">已发货 &nbsp; |</div>
+            <div class="name">温女士</div>
+        </div>
+        <div class="div div5">
+            <div class="divbox">
+                <div>3-20</div>
+                <div>2:20</div>
+            </div>
+            <div class="red"></div>
+            <div class="work">已发货 &nbsp; |</div>
+            <div class="name">温女士</div>
         </div>
     </div>
-    <!-- <script src="../jquery.js"></script> -->
-
-    <script>
-
-        /* $(function () {
-            $('.divv').click(function () {
-                alert('1')
-                $('p').slideToggle("slow");
-            })
-        }) */
-        /* $.ajax({
-            url: 'http://47.97.208.201:3000/swiper',
-            type: 'get',
-            success: function (a) {
-                alert('1')
-                console.log(a);
-            }
-        }) */
-
-
-
-    </script>
-
+    <script src="./js.js"></script>
 </body>
 
 </html>

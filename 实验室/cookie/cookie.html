@@ -6,42 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="../../jquery.js"></script>
 </head>
 
 <body>
     <!-- cookie是保存数据的，可以帮助实现在某个网站的第几百页的时候就算用户刷新了浏览器也可以展示关闭之前的那个页面
       说明书：
-        存在的时间：1：在没有关闭此页面之前  2：可以在cookie中设置cookie过期的一个时间 
-        使用的方式：每次cookie只能创建一个key（属性）=value（属性值），创建多个是无效的如（document.cookie = 'name=qqq;age=12'）
+        存在的时间：1：在没有关闭此页面之前  
+                   2：可以在cookie中设置cookie过期的一个时间 
+                   保存cookie的方法： document.cookie='name=age'
+        使用的方式：每次cookie只能创建一个key（属性）=value（属性值） 
+        创建多个是无效的如（document.cookie = 'name=qqq;age=12'）
         cookie数据的数据是共享的：在一个文件内cookie数据是可以让别的网页访问的到的cookie值
-
         在后台的存储cookie中可以查看的-->
-
     <input type="button" class="btn" name="" id="" value="点击事件">
     <input type="button" class="btns" name="" id="" value="读取cookie值">
     <input type="text" name="" id="">
     <script>
-        $('.btn').click(function () {
-            //这个是保存cookie的数据
-            document.cookie = "name=1"
-            document.cookie = "names=2"
-            document.cookie = "username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT";
-        })
-        $('.btns').click(function () {
-            console.log(document.cookie);
-            console.log('1');
-        })
-        var now = new Date()
-        console.log(now.setDate);
-        console.log(now.setFullYear);
-        console.log(now.setHours);
-        console.log(now.setMilliseconds);
-        console.log(now.setMinutes);
-        console.log(now.setMonth);
-        console.log(now.setSeconds);
-        console.log(now.setTime);
-        console.log(now.getTime());
+        /* 保存一个cookie值,一次能治*/
+        /* cookie 的总数量没有限制，但是每个域名的COOKIE 数量和每个COOKIE 的大小是有限制的！
+            IE 每个域名限制为50 个。
+            Firefox 每个域名cookie 限制为50 个。
+            Opera 每个域名cookie 限制为30 个。
+            Safari/webkit 貌似没有cookie 限制。但是假如cookie 很多，则会使header 大小超过服
+            务器的处理的限制，会导致错误发生。
+            不同浏览器间每个cookie 文件大小也不同
+            Firefox 和safari 是4097 个字节，包括名（name）、值（value）和等号。
+            Opera 是4096 个字节，包括：名（name）、值（value）和等号。
+            IE 是4095 个字节，包括：名（name）、值（value）和等号。*/
+        document.cookie = 'name=yue';
+        document.cookie = 'age=12';
+
+        /* 您还可以为 cookie 添加一个过期时间（以 UTC 或 GMT 时间）。默认情况下，cookie 在浏览器关闭时删除： */
 
     </script>
 </body>
