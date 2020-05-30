@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+	   <script type="text/javascript">
+	   
+	   	 	var ww=function(){
+				return b={
+					q:{
+						fun:()=>{
+							console.log(this);
+						}
+					}
+				}
+			}
+			var obj=ww()
+			obj.q.fun()
+			/* 箭头函数中的this指向的是他所在区域的this，这个箭头函数所在的区域是一个对象q这个对象
+			而，对象是没有this的所以指向window*/
+			
+			
+			
+/* let a = 1;
+obj11={
+	obj1:{
+		obj:function(){
+			(()=>{
+				console.log(this);
+			})()
+		}
+	}
+}
+obj11.obj1.obj(); */
+/* 箭头函数中的this指向的是他所在区域的this，这个箭头函数中的所在区域是一个匿名函数时吧，，
+ 由于函数有this的指向，所以这个this就是function匿名函数，由于匿名函数中的this是一个es5函数，
+ 他的指向是被调用者的this，这个es5这个this就是obj1*/
+	   </script>
+	</body>
+</html>
